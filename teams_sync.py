@@ -3,8 +3,7 @@ This Python script is offered with no formal support.
 If you run into difficulties, reach out to the person who provided you with this script.
 
 Documentation for using the Teams Sync API can be found here:
-https://support.stackenterprise.co/support/solutions/articles/22000232700-team-membership-sync
-'''
+https://support.stackenterprise.co/support/solutions/articles/22000232700-team-membership-sync#syncing-team-membership-via-api-push-(2019.2-release-or-later)'''
 import requests
 import json
 
@@ -36,10 +35,11 @@ def read_json(file_path):
 
 if __name__ == '__main__':
 
-    base_url = 'URL_TO_YOUR_STACKOVERFLOW_TEAMS_SITE'
+    # Change these variables to match your environment
+    base_url = 'URL_TO_YOUR_STACKOVERFLOW_TEAMS_SITE' # e.g. 'https://subdomain.stackenterprise.co'
     key = 'YOUR_KEY'
     token = 'YOUR_TOKEN'
-    json_path = 'PATH_TO_JSON_FILE'
+    json_path = 'PATH_TO_JSON_FILE' # e.g. 'teams_data.json'
 
     # Alternatively, you can directly assign the teams_data variable to a list of dictionaries
     teams_data = read_json(json_path)
